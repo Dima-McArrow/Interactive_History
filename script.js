@@ -1,4 +1,4 @@
-/* const prompt = require('prompt-sync')() */
+const prompt = require('prompt-sync')()
 let nextMove = ''
 let playerName = ''
 let questionOne = ''
@@ -8,7 +8,7 @@ console.log('\n\n\tVous venez de quitter votre village aujourd\'hui.\n\tVous ave
 
 do {
   nextMove = prompt('\tPress Y continue or n to quit: ')
-} while ((nextMove === '' || nextMove.length > 0) && nextMove != 'Y' && nextMove != 'n')
+} while (nextMove != 'Y' && nextMove != 'n')
 
 if (nextMove === 'Y') {
   console.log('\n\tLe puissant et célèbre illusionniste Dalmior De Nioden, \n\tvous accueille en personne, vous êtes très honoré !\n')
@@ -36,7 +36,7 @@ if (nextMove === 'Y') {
     console.log(`\tSur la droite, vous apercevez un étrange personnage\n\ten train de regarder une boule lumineuse. \n\tC'est sûrement votre maître. Mais sur la gauche,\n\til y a un étrange miroir, qui attire votre attention...`)
   } else if (questionOne == '2') {
     console.log(`\n\tLe jardin de l'école est grandiose.\n\tIl est bien fleuri à cette saison, et les fleurs sont très odorantes.`)
-    console.log('\n\t***\n')
+    prompt('\n\t***\n')
     console.log(`\tSoudain, vous croisez le jardinier Edgar.\n\tIl n'a pas l'air très content de vous voir par ici.`)
   }
 
